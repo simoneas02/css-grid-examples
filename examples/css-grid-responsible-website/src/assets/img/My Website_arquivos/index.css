@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  p, h1, figure {
+      margin: 0;
+  }
+
+
+/*****************************/
+/* Header */
+/****************************/
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    color: #272727;
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 400px 1fr 150px;
+    grid-template-areas: 'header header header header header header header header'
+                         'aside1 aside1 main   main   main   main   aside2 aside2'
+                         'footer footer footer footer footer footer footer footer';
+
+}
+
+.container__header {
+    grid-area: header;
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: 'text text text text text text img1 img1'
+                         'text text text text text text img2 img2';
+}
+
+.container__header__text {
+    background: purple;
+    color: white;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    grid-area: text;
+}
+
+.container__header__img1 {
+    grid-area: img1;
+}
+
+.container__header__img2 {
+    grid-area: img2;
+}
+
+
+/*****************************/
+/* Main */
+/****************************/
+
+.container__main__aside1 {
+    grid-area: aside1;
+}
+
+.container__main {
+    max-width: 1200px;
+    width: 100%;
+
+    grid-area: main;
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.container__main__aside2 {
+    grid-area: aside2;
+}
+
+
+/*****************************/
+/* Footer */
+/****************************/
+.container__footer {
+    text-align: center;
+    padding: 40px;
+    background: purple;
+    color: white;
+    font-size: 1.2em;
+
+    grid-area: footer;
+}
