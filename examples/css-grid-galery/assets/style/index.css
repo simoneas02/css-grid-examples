@@ -1,0 +1,64 @@
+/* Generic styles ----------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1, h2, p, figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+/* Page styles -------------------------------------------------*/
+.container {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  /* grid-template-columns: .5 .5 10fr .5 .5; */
+  grid-template-columns: .5 repeat(3, 1fr) .5;
+  grid-gap: 20px;
+  grid-template-areas: "header header header header header"
+                       " .     main   main   main   .   "
+                       "footer footer footer footer footer";
+}
+
+.header {
+  width: 100%;
+  height: 350px;
+  background: url("../img/r1.png") center black no-repeat;
+  background-size: contain;
+  grid-area: header;
+}
+
+.container__main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  grid-area: main;
+}
+
+.footer {
+  text-align: center;
+  color: aliceblue;
+  font-size: 18px;
+  padding: 30px;
+  width: 100%;
+  background-color: black;
+  grid-area: footer;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #ffc600;
+}
