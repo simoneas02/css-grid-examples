@@ -24,8 +24,6 @@ img {
   height: 100%;
 
   display: grid;
-  /* grid-template-columns: .5 .5 10fr .5 .5; */
-  grid-template-columns: .5 repeat(3, 1fr) .5;
   grid-gap: 20px;
   grid-template-areas: "header header header header header"
                        " .     main   main   main   .   "
@@ -37,10 +35,11 @@ img {
   height: 350px;
   background: url("../img/r1.png") center black no-repeat;
   background-size: contain;
+  
   grid-area: header;
 }
 
-.container__main {
+.main {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -55,6 +54,7 @@ img {
   padding: 30px;
   width: 100%;
   background-color: black;
+  
   grid-area: footer;
 }
 

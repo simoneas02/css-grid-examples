@@ -1,0 +1,75 @@
+/* Generic styles ----------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+/* Page styles -------------------------------------------------*/
+.container {
+  height: 60%;
+  color: darkorchid;
+  font-size: 20px;
+  font-weight: 700;
+
+  display: inline-grid;
+  display: grid;
+
+  grid-template-columns: 50px 100px 200px;
+  grid-template-columns: 50px 20% auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 3fr;
+
+  grid-template-rows: 100px 200px;
+
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+
+  grid-gap: 30px 60px;
+  grid-gap: 10px;
+}
+
+.container__item {
+  padding: 20px;
+  text-align: center;
+}
+
+.itemA {
+  background: lightgreen;
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  grid-column: 1 / 4;
+  grid-column: 1 / -1;
+
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.itemB {
+  background: lightseagreen;
+}
+
+.itemC {
+  background: lightcoral;
+}
+
+.itemD {
+  background: lightgoldenrodyellow;
+}
+
+.itemE {
+  background: lightgray;
+}
+
+.itemF {
+  background: lightskyblue;
+}
