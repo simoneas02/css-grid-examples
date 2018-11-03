@@ -1,0 +1,107 @@
+/* Generic styles ----------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+html, body, main {
+  height: 100%;
+}
+
+div, figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/*----------------------------------------------*/
+.lagertha {
+  background: #f06;
+  color: #fff;
+  font-size: 50px;
+}
+
+.container {
+  width: 100%;
+
+  display: grid;
+  /* grid-template-columns: repeat(2, minmax(200px, 1fr)) 100px;
+  grid-template-rows: 1fr 2fr 20%; */
+  grid-gap: 20px;
+
+  grid-template-areas: 
+    'header'
+    'deusa2'
+    'deusa3'
+    'deusa4'
+    'deusa5'
+    'deusa6'
+    'deusa7'
+    'deusa8'
+    'deusa9';
+}
+
+@media (min-width: 500px) {
+  .container {
+    grid-template-areas: 
+      'header header header'
+      'deusa2 deusa2 deusa3'
+      'deusa2 deusa2 deusa3'
+      'deusa4 deusa4 deusa5'
+      'deusa4 deusa4 deusa5'
+      'deusa6 deusa7 deusa7'
+      'deusa6 deusa7 deusa7'
+      'deusa8 deusa9 deusa9'
+      'deusa8 deusa9 deusa9';
+  }
+}
+
+@media (min-width: 850px) {
+  .container {
+    grid-template-areas: 
+      'header header header header header'
+      'deusa2 deusa2 deusa3 deusa4 deusa4'
+      'deusa2 deusa2 deusa5 deusa5 deusa6'
+      'deusa7 deusa7 deusa8 deusa8 deusa6'
+      'deusa7 deusa7 deusa9 deusa9 deusa6';
+  }
+}
+
+.deusa1 {
+  /* grid-column: 1/-1; */
+  /* grid-row: span 4; */
+  grid-area: header;
+}
+
+.deusa2 {
+  grid-area: deusa2;
+}
+.deusa3 {
+  grid-area: deusa3;
+}
+
+.deusa4 {
+  grid-area: deusa4;
+}
+
+.deusa5 {
+  grid-area: deusa5;
+}
+
+.deusa6 {
+  grid-area: deusa6;
+}
+
+.deusa7 {
+  grid-area: deusa7;
+}
+.deusa8 {
+  grid-area: deusa8;
+}
+.deusa9 {
+  grid-area: deusa9;
+}
